@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+
+section{
+    height: 100vh; background-image: url("bg_1.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+   
+}
+
+.hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+h2 {
+    color: pink;
+    font-size: calc(1.5rem + 1vw);
+    padding-bottom: 20rem;
+    text-align: center;
+}
+
+.button {
+    position: relative;
+}
+
+.button--no {
+    position: absolute; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button a {
+    display: inline-block;
+    padding: 1rem 2rem; 
+    margin: 0.5rem; 
+    background-color: pink;
+    color: rgb(0, 0, 0);
+    font-size: calc(0.8rem + 0.5vw); 
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.5rem; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button a:hover {
+    background-color: lightcoral; 
+    transform: scale(1.05); 
+}

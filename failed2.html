@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+    <div class="hello">
+        <h2>Ok finally..last chance..yes or no....</h2>
+        <div class="button">
+            <a class="button--y" href="success.html">Yes</a>
+            <a class="button--no">No</a>
+        </div>
+    </div></section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.querySelector('.button--no');
+
+            button.addEventListener('mouseover', moveButton);
+            button.addEventListener('touchstart', moveButton);
+
+            function moveButton() {
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+
+                const buttonWidth = button.offsetWidth;
+                const buttonHeight = button.offsetHeight;
+
+                const maxLeft = viewportWidth - buttonWidth;
+                const maxTop = viewportHeight - buttonHeight;
+
+                const randomLeft = Math.random() * maxLeft;
+                const randomTop = Math.random() * maxTop;
+
+                button.style.left = `${randomLeft}px`;
+                button.style.top = `${randomTop}px`;
+            }
+        });
+    </script>
+</body>
+</html>
